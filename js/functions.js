@@ -13,4 +13,17 @@ const extractNumbers = (string) => {
 
   return numbers === '' ? NaN : Number(numbers);
 };
-export { checkStringLength, checkPalindrome, extractNumbers };
+
+const getRandomInteger = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
+const getRandomArrayElement = (array) =>
+  array[getRandomInteger(0, array.length - 1)];
+
+export {
+  checkStringLength,
+  checkPalindrome,
+  extractNumbers,
+  getRandomInteger,
+  getRandomArrayElement
+};
